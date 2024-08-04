@@ -164,13 +164,24 @@ body {
     grid-gap: 5%;
 }
 
-.projects .container .projects_list .project img {
-    width: 100%;
+.projects .container .projects_list .project .logo {
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.projects .container .projects_list .project .logo img {
+    height: 100%;
 }
 
 .projects .container .projects_list .project a {
     text-decoration: none;
     color: var(--balck-color);
+}
+
+.projects .container .projects_list .project a p{
+    text-align: justify;
 }
 
 .projects .container .projects_list .project .btn {
