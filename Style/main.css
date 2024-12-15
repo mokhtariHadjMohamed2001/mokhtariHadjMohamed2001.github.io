@@ -52,32 +52,67 @@ body {
 
 /* End Global Rules */
 /* Start Menu */
-.menu .container {
+.nav .container .menu {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.menu .container li {
+.nav .container li {
     display: inline;
 }
 
-.menu .container .socialMedia li {
+.nav .container .socialMedia li {
     margin: 0 5px;
 }
 
-.menu .container .menu_item li {
+.nav .container .menu_item li {
     margin: 0 10px;
 }
 
-.menu .container a {
+.nav .container a {
     text-decoration: none;
     color: var(--balck-color);
     font-size: 20px;
 }
 
-.menu .container a:hover {
+.nav .container a:hover {
     color: var(--main-color);
+}
+
+.nav .container .hamburger {
+    cursor: pointer;
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.nav .container .hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: var(--balck-color);
+}
+
+@media (max-width: 720px) {
+    .nav .container .menu {
+        display: none;
+        text-align: center;
+    }
+
+    .nav .container .socialMedia,
+    .nav .container .menu_item {
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav .container .menu_item li {
+        display: block;
+    }
+
+    .nav .container .hamburger {
+        display: flex;
+        margin-top: 4%;
+    }
 }
 
 /* End Menu */
@@ -102,6 +137,26 @@ body {
 
 .about .container .right_side img {
     width: 80%;
+}
+
+@media (max-width: 720px) {
+    .about {
+        margin-top: 20px;
+    }
+
+    .about .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .about .container .left_side {
+        width: 100%;
+    }
+
+    .about .container .right_side {
+        width: 100%;
+        text-align: center;
+    }
 }
 
 /* End About */
@@ -151,6 +206,31 @@ body {
     }
 }
 
+@media (max-width: 720px){
+    .skills .container .skill {
+        width: 150px;
+    }
+
+    @keyframes slide {
+
+        20% {
+            margin-left: 0px;
+        }
+    
+        40% {
+            margin-left: calc(-150px * 4);
+        }
+    
+        60% {
+            margin-left: calc(-150px * 8);
+        }
+    
+        80% {
+            margin-left: calc(-150px * 12);
+        }
+    }
+}
+
 /* End Skills */
 /* Start projects */
 .projects {
@@ -180,7 +260,7 @@ body {
     color: var(--balck-color);
 }
 
-.projects .container .projects_list .project a p{
+.projects .container .projects_list .project a p {
     text-align: justify;
 }
 
@@ -199,7 +279,12 @@ body {
     color: var(--main-color);
 }
 
-
+@media (max-width: 720px){
+    .projects .container .projects_list{
+        display: flex;
+        flex-direction: column;
+    }
+}
 /* End projects */
 /* Start Resume */
 .resume {
@@ -233,6 +318,20 @@ body {
 
 .resume .container .section .list .line {
     border-top: 1px dashed var(--balck-color);
+}
+
+@media (max-width: 720px){
+    .resume .container .section{
+        display: block;
+    }
+
+    .resume .container .section .list{
+        width: 100%;
+    }
+
+    .resume .container .section .list li{
+        width: 100%;
+    }
 }
 
 /* End Resume */
@@ -296,30 +395,44 @@ body {
 }
 
 .contact .container .box .right_side img {
-    width: 150%;
+    width: 100%;
+}
+
+@media (max-width: 720px){
+    .contact .container .box{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: 10;
+    }
+
+    .contact .container .box .right_side{
+        margin-top: 2%;
+        width: 100%;
+        text-align: center;
+    }
 }
 
 /* End Contact Us */
 /* Start Footer */
-.footer{
+.footer {
     margin-top: 50px;
     margin-bottom: 30px;
 }
 
-.footer .container{
+.footer .container {
     text-align: center;
 }
 
-.footer .container ul{
+.footer .container ul {
     padding: 0;
 }
 
-.footer .container ul li{
+.footer .container ul li {
     display: inline;
     margin: 5px;
 }
 
-.footer .container ul li a{
+.footer .container ul li a {
     text-decoration: none;
     color: var(--balck-color);
     font-size: 20px;
@@ -328,4 +441,5 @@ body {
 .footer .container a:hover {
     color: var(--main-color);
 }
+
 /* End Footer */

@@ -52,32 +52,67 @@ body {
 
 /* End Global Rules */
 /* Start Menu */
-.menu .container {
+.nav .container .menu {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.menu .container li {
+.nav .container li {
     display: inline;
 }
 
-.menu .container .socialMedia li {
+.nav .container .socialMedia li {
     margin: 0 5px;
 }
 
-.menu .container .menu_item li {
+.nav .container .menu_item li {
     margin: 0 10px;
 }
 
-.menu .container a {
+.nav .container a {
     text-decoration: none;
     color: var(--balck-color);
     font-size: 20px;
 }
 
-.menu .container a:hover {
+.nav .container a:hover {
     color: var(--main-color);
+}
+
+.nav .container .hamburger {
+    cursor: pointer;
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.nav .container .hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: var(--balck-color);
+}
+
+@media (max-width: 720px) {
+    .nav .container .menu {
+        display: none;
+        text-align: center;
+    }
+
+    .nav .container .socialMedia,
+    .nav .container .menu_item {
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav .container .menu_item li {
+        display: block;
+    }
+
+    .nav .container .hamburger {
+        display: flex;
+        margin-top: 4%;
+    }
 }
 
 /* End Menu */
@@ -87,30 +122,31 @@ body {
     margin-bottom: 30px;
 }
 
-.projects .project img{
+.projects .project img {
     width: 100%;
 }
+
 /* End projects */
 /* Start Footer */
-.footer{
+.footer {
     margin-top: 50px;
     margin-bottom: 30px;
 }
 
-.footer .container{
+.footer .container {
     text-align: center;
 }
 
-.footer .container ul{
+.footer .container ul {
     padding: 0;
 }
 
-.footer .container ul li{
+.footer .container ul li {
     display: inline;
     margin: 5px;
 }
 
-.footer .container ul li a{
+.footer .container ul li a {
     text-decoration: none;
     color: var(--balck-color);
     font-size: 20px;
@@ -119,4 +155,5 @@ body {
 .footer .container a:hover {
     color: var(--main-color);
 }
+
 /* End Footer */
